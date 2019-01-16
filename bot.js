@@ -347,7 +347,7 @@ client.on('message', message => {
             if (message.content.startsWith(prefix + "help")) {
      let embed = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
-.addField('     **Prefix [$play] ** ')
+.addField('     **Prefix [*play] ** ')
 .addField('     **(1)-*play** ' ,' **open music** ')
 .addField('     **(2)-*skip**  ' ,' **skip to the next song** ')
 .addField('     **(3)-*stop** ' , '**disconect the bot from the music room**') 
@@ -359,6 +359,12 @@ client.on('message', message => {
   message.channel.sendEmbed(embed);
     }
 });
+
+
+const Discord = require("discord.js");
+const client = new Discord.Client();
+var prefix = "*";
+var adminprefix = '*'
 
 const developers = ["99944011027976192","id"]
 client.on('message', message => {
